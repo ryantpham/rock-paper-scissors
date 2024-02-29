@@ -33,7 +33,7 @@ function game(){
     }
 
     //Checks if the game should continue as long as the points are below 3
-    if ( playerPoints < 3 && computerPoints < 3 ){
+    if ( playerPoints < 1 && computerPoints < 1 ){
         game(); //This is a recursive call which the function calls itself if the if statement is satisfied
     } else if (playerPoints > computerPoints) {
         console.log("You won the game!")
@@ -77,6 +77,21 @@ function playRound(){
     }    
 }
 
-//To run the game we call the function:
-game();
+//To run the game in the console we call the function:
+//game();
+
+//button when clicked on
+const pickButton = document.querySelectorAll('button');
+
+pickButton.forEach((button) => {
+    button.addEventListener('click',()=>{
+        console.log('im clicked')
+        
+        if (button.classList.contains('rock')){
+            return console.log('rock')
+        }
+
+    });
+});
+
 
