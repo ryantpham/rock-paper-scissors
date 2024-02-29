@@ -80,12 +80,3 @@ function playRound(){
 //To run the game we call the function:
 game();
 
-/* Test codes:
-playerSelection = "rock";
-computerSelection = getComputerChoice();
-console.log("You: " + playerSelection)
-console.log( "Computer: " + computerSelection)
-
-//Runs the Game once using parameters
-console.log(playRound(playerSelection, computerSelection));
-*/
