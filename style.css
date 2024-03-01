@@ -5,8 +5,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 0px;
+    margin: 0px;
     font-family: 'Barlow Semi Condensed', sans-serif;
+    margin-bottom: 30px;
 }
 
 h1{
@@ -24,6 +26,15 @@ h1{
 }
 
 
+.triangle-svg {
+    position: absolute;
+    width: 313px;   /* width of your SVG */
+    height: 278px;  /* height of your SVG */
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    z-index: 1; 
+}
 
 .resultContainer{
     color: aliceblue;
@@ -36,17 +47,18 @@ h1{
 
 .choices{
     display: flex;
-    gap: 30px;
     justify-content: center;
+    gap: 110px;
 }
 
 
 button {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     cursor: pointer;
     color: aliceblue;
+    z-index: 2; 
     
 }
 
@@ -80,6 +92,7 @@ button {
     background-size:65%; /* This will cover the entire area of the button */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-position: center; /* Centers the image in the button */
+    margin-top: 12px;
 }
 
 .scissors:hover{
@@ -91,7 +104,7 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding: 20px;
+    padding: 10px;
     margin-top: 30px;
     background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
     border-radius: 10px;
@@ -105,7 +118,7 @@ button {
 }
 
 .resultContainer > div {
-    margin: 10px 0;
+    margin: 5px 0;
     font-size: 1.2em;
 }
 
