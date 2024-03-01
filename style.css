@@ -1,0 +1,70 @@
+body {
+    background: radial-gradient(circle, hsl(214, 47%, 23%) 0%, hsl(237, 49%, 15%) 100%);
+}
+
+h1{
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+}
+
+.resultContainer{
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.choices{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+
+button {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: aliceblue;
+    
+}
+
+.rock{
+    background-image: url("img/icon-rock.svg");
+    border: solid hsl(349, 71%, 52%) 15px;
+    background-size:65%; /* This will cover the entire area of the button */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: 45%center; /* Centers the image in the button */
+}
+
+.rock:hover{
+    border: solid hsl(349, 70%, 56%) 16px;
+}
+
+.paper{
+    background-image: url("img/icon-paper.svg");
+    border: solid hsl(230, 89%, 62%) 15px;
+    background-size:65%; /* This will cover the entire area of the button */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: 40% center; /* Centers the image in the button */
+}
+
+.paper:hover{
+    border: solid hsl(230, 89%, 65%) 16px;
+}
+
+.scissors{
+    background-image: url("img/icon-scissors.svg");
+    border: solid hsl(39, 89%, 49%) 15px;
+    background-size:65%; /* This will cover the entire area of the button */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image in the button */
+}
+
+.scissors:hover{
+    border: solid hsl(40, 84%, 53%) 16px;
+}
