@@ -126,7 +126,7 @@ pickButton.forEach((button) => {
 
         playerDisplay.textContent = `Player Selection: ${playerSelection}`;
         computerDisplay.textContent = `Computer Selection: ${computerSelection}`;
-        scoreDisplay.textContent = `Player: ${playerPoints} Computer: ${computerPoints}`
+        scoreDisplay.textContent = `Scoreboard: ${playerPoints} - ${computerPoints}`
 
 
         //Game status
@@ -147,17 +147,17 @@ pickButton.forEach((button) => {
             computerPoints = 0;
             resultDisplay.style.color = '#7FFF94';
             resultDisplay.textContent = `You won the game!`
-            playerDisplay.textContent = `Player:`;
-            computerDisplay.textContent = `Computer:`;
-            scoreDisplay.textContent = `Player: ${playerPoints} Computer: ${computerPoints}`
+            playerDisplay.textContent = `Player: Rematch?`;
+            computerDisplay.textContent = `Computer: Sure.`;
+            scoreDisplay.textContent = `Scoreboard: ${playerPoints} - ${computerPoints}`
         } else if (computerPoints === 5){
             
             playerPoints = 0;
             computerPoints = 0;
             resultDisplay.textContent = `You lost the game!`
-            playerDisplay.textContent = `Player:`;
-            computerDisplay.textContent = `Computer:`;
-            scoreDisplay.textContent = `Player: ${playerPoints} Computer: ${computerPoints}`
+            playerDisplay.textContent = `Player: Rematch?`;
+            computerDisplay.textContent = `Computer: I'm Game!`;
+            scoreDisplay.textContent = `Scoreboard: ${playerPoints} - ${computerPoints}`
         } 
         
 
