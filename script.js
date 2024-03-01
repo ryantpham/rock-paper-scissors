@@ -109,18 +109,23 @@ pickButton.forEach((button) => {
         playerDisplay.textContent = `Player: ${playerSelection}`;
         computerDisplay.textContent = `Computer: ${computerSelection}`;
         scoreDisplay.textContent = `Player: ${playerPoints} Computer: ${computerPoints}`
-        if (playerPoints === 3){
+        if (playerPoints === 5){
             playerPoints = 0;
             computerPoints = 0;
+            resultDisplay.style.color = '#7FFF94';
             resultDisplay.textContent = `You Win!`
+            playerDisplay.textContent = `Player:`;
+            computerDisplay.textContent = `Computer:`;
             scoreDisplay.textContent = `Player: ${playerPoints} Computer: ${computerPoints}`
 
 
-        } else if (computerPoints === 3){
+        } else if (computerPoints === 5){
             
             playerPoints = 0;
             computerPoints = 0;
             resultDisplay.textContent = `You Lose!`
+            playerDisplay.textContent = `Player:`;
+            computerDisplay.textContent = `Computer:`;
             scoreDisplay.textContent = `Player: ${playerPoints} Computer: ${computerPoints}`
 
 

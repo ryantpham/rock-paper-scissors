@@ -1,12 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
 body {
     background: radial-gradient(circle, hsl(214, 47%, 23%) 0%, hsl(237, 49%, 15%) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 h1{
     color: aliceblue;
     display: flex;
     justify-content: center;
+
+    font-size: 2.5em; /* Adjust the size as needed */
+    font-weight: 700; /* Bold font weight */
+    text-align: center; /* Center align the text */
+    margin-top: 20px; /* Add some space at the top */
+    text-transform: uppercase; /* Uppercase letters for more impact */
+    border-bottom: 3px solid hsl(217, 16%, 45%); /* Header outline color */
+    padding-bottom: 10px; /* Space between text and border */
 }
+
+
 
 .resultContainer{
     color: aliceblue;
@@ -67,4 +84,42 @@ button {
 
 .scissors:hover{
     border: solid hsl(40, 84%, 53%) 16px;
+}
+
+.resultContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 10px;
+    color: hsl(229, 25%, 31%); /* Dark text color */
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.resultContainer > div {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.playerDisplay, .computerDisplay, .scoreDisplay {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: aliceblue; /* Score Text color */
+}
+
+.resultDisplay {
+    font-size: 1.8em;
+    color: hsl(349, 71%, 52%); /* Using Rock Gradient color for emphasis */
+    padding: 10px 20px;
+    border: 2px solid hsl(217, 16%, 45%); /* Header Outline color */
+    border-radius: 5px;
 }
