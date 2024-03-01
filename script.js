@@ -124,10 +124,8 @@ pickButton.forEach((button) => {
             scoreDisplay.textContent = `Player: ${playerPoints} Computer: ${computerPoints}`
 
 
-        } else if (playerPoints > 3 || playerPoints > 3){
-            playerPoints = 0;
-            computerPoints = 0;
-            resultDisplay.textContent = '';
+        } else{
+            resultDisplay.textContent = ''
         }
         
 
