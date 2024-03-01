@@ -131,7 +131,7 @@ button {
 
 .resultDisplay {
     font-size: 1.8em;
-    color: hsl(349, 71%, 52%); /* Using Rock Gradient color for emphasis */
+    color: aliceblue; /* Using Rock Gradient color for emphasis */
     padding: 10px 20px;
     border: 2px solid hsl(217, 16%, 45%); /* Header Outline color */
     border-radius: 5px;

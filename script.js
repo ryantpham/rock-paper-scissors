@@ -91,6 +91,7 @@ const scoreDisplay = document.querySelector('.scoreDisplay');
 
 pickButton.forEach((button) => {
     button.addEventListener('click',()=>{
+        //Runs a round of Rock Paper Scissors when clicked
         if (button.classList.contains('rock')){
             const choice = 'rock';
             playerSelection = playerChoice(choice);
@@ -104,34 +105,60 @@ pickButton.forEach((button) => {
 
         computerSelection = getComputerChoice();
         result = playRound();
-        
 
-        playerDisplay.textContent = `Player: ${playerSelection}`;
-        computerDisplay.textContent = `Computer: ${computerSelection}`;
+        //emojis for playerSelection
+        if(playerSelection === 'Rock'){
+            playerSelection ='👊'
+        } else if (playerSelection === 'Paper'){
+            playerSelection = '✋'
+        } else {
+            playerSelection = '✌';
+        }
+
+        //emojis for computer Selection
+        if (computerSelection === 'Rock') {
+            computerSelection = '👊';
+        } else if (computerSelection === 'Paper') {
+            computerSelection = '✋';
+        } else {
+            computerSelection = '✌️';
+        }
+
+        playerDisplay.textContent = `Player Selection: ${playerSelection}`;
+        computerDisplay.textContent = `Computer Selection: ${computerSelection}`;
         scoreDisplay.textContent = `Player: ${playerPoints} Computer: ${computerPoints}`
+
+
+        //Game status
+        if (playerPoints === computerPoints){
+            resultDisplay.textContent = `Currently a Draw`
+            resultDisplay.style.color = 'hsl(39, 89%, 49%)';
+        } else if (playerPoints > computerPoints){
+            resultDisplay.textContent = 'You are in the lead!'
+            resultDisplay.style.color = '#7FFF94'
+        } else {
+            resultDisplay.textContent = 'You are losing!'
+            resultDisplay.style.color = 'hsl(349, 71%, 52%)'
+        }
+
+        //Decides who is the winner
         if (playerPoints === 5){
             playerPoints = 0;
             computerPoints = 0;
             resultDisplay.style.color = '#7FFF94';
-            resultDisplay.textContent = `You Win!`
+            resultDisplay.textContent = `You won the game!`
             playerDisplay.textContent = `Player:`;
             computerDisplay.textContent = `Computer:`;
             scoreDisplay.textContent = `Player: ${playerPoints} Computer: ${computerPoints}`
-
-
         } else if (computerPoints === 5){
             
             playerPoints = 0;
             computerPoints = 0;
-            resultDisplay.textContent = `You Lose!`
+            resultDisplay.textContent = `You lost the game!`
             playerDisplay.textContent = `Player:`;
             computerDisplay.textContent = `Computer:`;
             scoreDisplay.textContent = `Player: ${playerPoints} Computer: ${computerPoints}`
-
-
-        } else{
-            resultDisplay.textContent = ''
-        }
+        } 
         
 
     });
